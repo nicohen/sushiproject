@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/file"
+          android:icon="@drawable/icon"
+          android:title="@string/file" >
+        <!-- "file" submenu -->
+        <menu>
+            <item android:id="@+id/new2"
+                  android:title="@string/new2" />
+            <item android:id="@+id/open"
+                  android:title="@string/open" />
+        </menu>
+    </item>
+</menu>
