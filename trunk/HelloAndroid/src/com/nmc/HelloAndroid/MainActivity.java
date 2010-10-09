@@ -1,13 +1,14 @@
 package com.nmc.HelloAndroid;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class main extends Activity {
+public class MainActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle icicle) {
@@ -18,7 +19,7 @@ public class main extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.context_menu, menu);
+		inflater.inflate(R.menu.main_menu, menu);
 		return true;
 	}
 
@@ -26,24 +27,34 @@ public class main extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle item selection
 		switch (item.getItemId()) {
-		case R.id.new2:
-			newGame();
+		case R.id.order_id:
+			order();
 			return true;
-		case R.id.open:
-			quit();
+		case R.id.cart_id:
+			cart();
+			return true;
+		case R.id.about_id:
+			about();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
 
-	private void quit() {
-		TextView text = (TextView) findViewById(R.id.text);
-		text.setText("Apreto quit");
+	private void about() {
+		Intent myIntent = new Intent(MainActivity.this, AboutActivity.class);
+		MainActivity.this.startActivity(myIntent);
 	}
 
-	private void newGame() {
-		TextView text = (TextView) findViewById(R.id.text);
-		text.setText("Apreto new_game");
+	private void cart() {
+		Intent myIntent = new Intent(MainActivity.this, CartActivity.class);
+		MainActivity.this.startActivity(myIntent);
 	}
+
+	private void order() {
+		Intent myIntent = new Intent(MainActivity.this, OrderActivity.class);
+		MainActivity.this.startActivity(myIntent);
+	}
+
+
 }
