@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -14,8 +13,9 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		setContentView(R.layout.main_layout);
-	}
 
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
@@ -41,11 +41,6 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	private void about() {
-		Intent myIntent = new Intent(MainActivity.this, AboutActivity.class);
-		MainActivity.this.startActivity(myIntent);
-	}
-
 	private void cart() {
 		Intent myIntent = new Intent(MainActivity.this, CartActivity.class);
 		MainActivity.this.startActivity(myIntent);
@@ -56,5 +51,9 @@ public class MainActivity extends Activity {
 		MainActivity.this.startActivity(myIntent);
 	}
 
+	private void about() {
+		Intent myIntent = new Intent(MainActivity.this, AboutActivity.class);
+		MainActivity.this.startActivity(myIntent);
+	}
 
 }
