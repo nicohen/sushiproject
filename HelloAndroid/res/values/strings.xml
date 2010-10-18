@@ -4,6 +4,7 @@
     <string name="title_about">Sobre Sushi Club...</string>
     <string name="title_cart">Carrito de Compras</string>
     <string name="title_order">Nuestros Productos</string>
+    <string name="title_order_detail">Detalle</string>
 	<string name="my_button_text">testo del boton</string>
 
 	<!-- main_menu.xml -->	
